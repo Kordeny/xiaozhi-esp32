@@ -155,7 +155,9 @@ class ImageConverterApp:
             self.output_dir.set(path)
 
     def select_files(self):
-        files = filedialog.askopenfilenames(filetypes=[("图片文件", "*.png;*.jpg;*.jpeg;*.bmp;*.gif")])
+        files = filedialog.askopenfilenames(
+            filetypes=[("图片文件", ["*.png", "*.jpg", "*.jpeg", "*.gif", "*.bmp"])]
+        )
         for f in files:
             self.tree.insert("", tk.END, values=("[ ]", os.path.basename(f)), tags=(f,))
 
