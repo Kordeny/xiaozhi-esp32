@@ -735,7 +735,8 @@ void LcdDisplay::SetupUI() {
     lv_obj_set_width(content_, LV_HOR_RES);
     lv_obj_set_flex_grow(content_, 1);
     lv_obj_set_style_pad_all(content_, 5, 0);
-    lv_obj_set_style_bg_color(content_, current_theme_.chat_background, 0);
+    // lv_obj_set_style_bg_color(content_, current_theme_.chat_background, 0);
+    lv_obj_set_style_bg_color(content_, lv_color_hex(0xFBC672), 0);    // 针对表情emoji，设置背景色为肤色，使得整体看起来像面部
     lv_obj_set_style_border_color(content_, current_theme_.border, 0); // Border color for content
 
     lv_obj_set_flex_flow(content_, LV_FLEX_FLOW_COLUMN); // 垂直布局（从上到下）
